@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    long long binary;
+    cout << "Enter a binary number: ";
+    cin >> binary;
+
+    int decimal = 0, base = 0;
+ while (binary > 0) {
+        int lastDigit = binary % 10;
+        decimal += lastDigit * pow(2, base);
+        binary /= 10;
+        base++;
+    }
+ cout << "Decimal: " << decimal << endl;
+return 0;
+}
