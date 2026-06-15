@@ -2,11 +2,11 @@
 using namespace std;
 
 void fibonacci(int n) {
-    int a = 0, b = 1;
+    int a = 0, b = 1, next;
 
     for (int i = 0; i < n; i++) {
         cout << a << " ";
-        int next = a + b;
+        next = a + b;
         a = b;
         b = next;
     }
@@ -14,9 +14,9 @@ void fibonacci(int n) {
 
 int main() {
     int n;
+    cout << "Enter n: ";
     cin >> n;
 
     fibonacci(n);
-
     return 0;
 }
